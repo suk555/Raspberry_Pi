@@ -24,7 +24,7 @@ sudo vi /etc/network/interfaces
                         netmask 255.255.255.0
                         gateway 192.168.10.1
 
-- DNS설정
+- DNS설정(도메인 룩업을 못하면 패키지 설치가 안된다.)
 /etc/systemd/resolved.conf
 DNS=8.8.8.8
 

@@ -6,6 +6,7 @@ IBM에서 개발하여 배포하고 상단히 많은 회사가 지원하는 최�
 
 $sudo apt-get update
 $sudo apt-get upgrade
+# 설치 명령어 입력 후 약 2,30분 시간이 소요되며 설치중에 여러 사용자를 등록할 수 있다.
 $bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 $sudo systemctl enable nodered.service
 $sudo systemctl start nodered

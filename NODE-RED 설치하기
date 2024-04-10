@@ -1,0 +1,14 @@
+[ NODE-RED 설치하기 ]
+IBM에서 개발하여 배포하고 상단히 많은 회사가 지원하는 최고의
+플로우형 시각화 개발 툴이다.
+대시보드, MQTT, TCP/UDP Server 등 많은 서비스를 연계할 수 있다.
+다양한 IoT기기를 연계하여 대시보드로 보고 인터렉션이 가능하다.
+
+$sudo apt-get update
+$sudo apt-get upgrade
+$bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+$sudo systemctl enable nodered.service
+$sudo systemctl start nodered
+
+웹접속 - http://192.168.10.10:1880 (설치 시 설정한 ID/PW 사용)
+대시보드 - http://192.168.10.10:1880/ui/

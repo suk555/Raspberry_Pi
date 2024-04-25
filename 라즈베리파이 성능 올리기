@@ -1,0 +1,20 @@
+# usb 메모리로 오버클럭은 좀 무리이다.
+
+- 온도 측정 (오버클럭 이전 온도 확인)
+    $vcgencmd measure_temp
+
+- swap 늘리기 (디스크 용량 고려)
+    vi /etc/dphys-swapfile
+       CONF_SWAPFILE=/var/swap
+       CONF_SWAPSIZE=128
+       CONF_MAXSWAP=512
+
+- 오버클럭 (시스템 상태에 따라 설정)
+    vi /boot/config.txt
+       arm_freq=2000
+       over_voltage=6
+       gpu_freq=750
+  * 주의) 설정을 잘못하면 아예 부팅이 안된다. 이럴때는 sdcard or usb 메모리의 config.txt을 윈도우에서 수정하고 다시 해보자.
+
+- 온도 측정 - (오버클럭 이후 온도 확인)
+    $vcgencmd measure_temp

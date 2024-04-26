@@ -23,4 +23,11 @@ $ cat vncstart.sh
 vncserver
 vncserver -list
 vncserver -kill :1 #서비스 중지
-  
+
+# 에러
+Couldn't start Xtightvnc; trying default font path.
+Please set correct fontPath in the vncserver script.
+Couldn't start Xtightvnc process.
+
+#해결
+$vncserver -fp "/usr/share/fonts/X11/misc,/usr/share/fonts/X11/Type1,built-ins"

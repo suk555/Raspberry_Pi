@@ -18,3 +18,11 @@
 
 - 온도 측정 - (오버클럭 이후 온도 확인)
     $vcgencmd measure_temp
+
+- Orange Pi swap 늘리기
+  sudo fallocate -l 3G /var/swap
+  sudo chmod 600 /var/swap
+  sudo mkswap /var/swap
+  sudo swapon /var/swap
+  vi /etc/fstab
+    /var/swap swap swap default 0 0

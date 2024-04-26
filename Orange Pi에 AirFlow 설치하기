@@ -7,7 +7,7 @@ $export PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2
 $export CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
 $pip3 install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 $airflow db init
-$mkdir /airflow/dags /airflow/data /airflow/plugins /airflow/logs
+$mkdir ./airflow/dags ./airflow/data ./airflow/plugins ./airflow/logs
 $nohup /home/orangepi/.local/bin/airflow webserver &
 $airflow users create --username userid --firstname [성] --lastname [이름] --role Admin --email userid@gmail.com
 

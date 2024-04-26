@@ -1,0 +1,26 @@
+# wifi 고정 IP, eth0 IP설정 (오렌지 파이는 가능하면 이 명령어를 사용하자)
+$nmtui
+
+# VNC 설치
+$sudo apt update
+$sudo apt upgrade
+$sudo apt install xfce4 xfce4-goodies
+$sudo apt install tigervnc-standalone-server
+
+$cd .vnc
+$cat config
+geometry=1440x870
+dpi=100
+
+$cat xstartup
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+exec startxfce4
+
+$ cat vncstart.sh
+#!/bin/sh
+vncserver
+vncserver -list
+vncserver -kill :1 #서비스 중지
+  

@@ -1,5 +1,6 @@
 # Orange Pi Zero 2W 버전
 
+$sudo apt-get install python3-dev 
 $mkdir airflow
 $export AIRFLOW_HOME=~/airflow
 $export AIRFLOW_VERSION=2.9.0

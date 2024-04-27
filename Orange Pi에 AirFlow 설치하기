@@ -11,6 +11,7 @@ $airflow db init
 $mkdir ./airflow/dags ./airflow/data ./airflow/plugins ./airflow/logs
 $nohup /home/orangepi/.local/bin/airflow webserver &
 $airflow users create --username userid --firstname [성] --lastname [이름] --role Admin --email userid@gmail.com
+$airflow scheduler
 
 # 사용자 로그인
 http://locahost:8080

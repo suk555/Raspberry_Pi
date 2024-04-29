@@ -4,7 +4,7 @@
 
 사진1) Raspberry Pi 3 Model B+(Mem 1G)
 
-사진2) Raspberry Pi 3 Model B(Mem 1G), Orange Pi Zero 2w(+PCi 확장보드 유선랜+USB-C Type 4)(Mem 1G)
+사진2) Raspberry Pi 3 Model B(Mem 1G), Orange Pi Zero 2w(+PCIe 확장보드 유선랜+USB-C Type 4)(Mem 1G)
 
 사진3) Raspberry Pi zero 2w(Mem 512M)
 

@@ -35,3 +35,6 @@
  sudo cat /proc/swaps #zram0항목 확인
  sudo zramctl # 마운트 상태 확인
 
+- 데스탑 화면 잠자기 모드 없애기(이거 켜놓으면 와이파이, ssh등 접속이 끊긴다)(Orange Pi만 적용했다)
+ sudo systemctl status sleep.target suspend.target hibernate.target hybrid-sleep.target
+ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target

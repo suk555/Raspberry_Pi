@@ -26,3 +26,12 @@
   sudo swapon /var/swap
   vi /etc/fstab
     /var/swap swap swap default 0 0
+
+- zram 활성화하기
+ sudo apt update
+ git clone https://github.com/foundObjects/zram-swap
+ cd zram-swap
+ sudo ./install.sh
+ sudo cat /proc/swaps #zram0항목 확인
+ sudo zramctl # 마운트 상태 확인
+

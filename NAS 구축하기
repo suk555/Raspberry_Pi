@@ -24,6 +24,15 @@ sudo vi /etc/network/interfaces
                         netmask 255.255.255.0
                         gateway 192.168.10.1
 
+sudo vi /etc/wpa_supplicant $ sudo cat wpa_supplicant.conf 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+        ssid=""
+        psk=""
+}
+
 - DNS설정(도메인 룩업을 못하면 패키지 설치가 안된다.)
 /etc/systemd/resolved.conf
 DNS=8.8.8.8

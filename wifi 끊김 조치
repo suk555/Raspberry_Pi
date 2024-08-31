@@ -1,0 +1,19 @@
+# 오렌지 파이의 경우 wifi 끊김이 심하다. 다양한 네트워크 설정을했는데 그래도 안된다.
+# 그래서 이런 방법을 사용해 봤다.
+git clone https://github.com/mainsail-crew/sonar.git
+cd sonar
+make config
+sudo make install (재부팅)
+
+cd /printer_data/config
+vi sonar.conf (모두 true로 설정)
+[sonar]
+enable: true               # false to disable till next reboot (will stop again if not set to true)
+debug_log: true            # if set to true, sonar will log ever ping with triptime and date/time
+persistant_log: true       # If true logs in /var/log/sonar.log, false logs to systemd
+target: auto                # IP Address, URL or auto as ping target
+count: 3                    # How often should be pinged?
+interval: 60                # Ping again after X seconds
+restart_treshold: 10        # If failed, restart WiFi after X seconds
+
+sudo systemctl restart sonar
